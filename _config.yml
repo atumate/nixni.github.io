@@ -1,0 +1,60 @@
+
+# identity
+username: nixni  # meta-author, logo Button, post author, aside, footer
+github_username: nixni 
+# remember about.md has id-info
+
+# site-info
+title: Nixni 
+email: 
+description: >- # this means to ignore newlines
+  Nixni's blog
+  nixni.cc
+
+
+
+# url-info
+footer_url: https://nixni.cc
+# baseurl: "" # the subpath of your site, e.g. /blog
+# url: "" # the base hostname & protocol for your site, e.g. http://example.com
+
+# edit button
+repo_url: https://github.com/nixni/nixni.github.io
+branch: master
+
+
+
+
+
+# Build settings
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  auto_ids: true
+# theme: minima
+# highlighter: none # rouge if not set
+plugins:
+  - jekyll-feed
+
+# paginate
+plugins: [jekyll-paginate]
+paginate: 10
+
+# jquery_tag_cloud
+tags_path: tags
+
+
+defaults:
+  -
+    scope:
+      path: "_posts"
+      type: "posts"
+    values:
+      layout: "post"
+  -
+    scope:
+      path: "pages"
+      type: "pages"
+    values:
+      layout: "page"
