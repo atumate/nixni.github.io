@@ -18,7 +18,7 @@
 	export https_proxy=http://127.0.0.1:8118
 	```
 1. `chkconfig privoxy on && service privoxy start`
-1. `curl ip.cn` 
+1. `curl ipinfo.io` 
 
 ## Be elegant
 
