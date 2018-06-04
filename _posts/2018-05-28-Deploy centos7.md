@@ -35,10 +35,6 @@ systemctl start docker
 docker run hello-world
 ```
 
-## shell code
-``` sh
-
-```
 ## LAMP
 ``` sh
 yum install -y httpd mysql mariadb-server php php-mysql
@@ -55,7 +51,7 @@ smb.conf
 	        security = user
 	        passdb backend = tdbsam
 	        # map to guest = bad user
-	[w_html]
+	[html]
 	        path = /var/www/html
 	        browsable =yes
 	        writable = yes
