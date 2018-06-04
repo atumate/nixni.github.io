@@ -1,6 +1,6 @@
 ## basic tools
 ``` sh
-yum -y install net-tools zip unzip vim elinks tree wget 
+yum -y install net-tools zip unzip vim elinks tree wget git
 ```
 
 ## ssh key login
