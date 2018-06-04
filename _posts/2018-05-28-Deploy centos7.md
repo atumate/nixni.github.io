@@ -20,6 +20,10 @@ ntpdate time.apple.com
 timedatectl set-timezone Asia/Shanghai
 ```
 
+## epel
+``` sh
+yum install -y epel
+```
 
 ## shell code
 ``` sh
