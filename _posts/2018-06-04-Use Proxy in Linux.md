@@ -1,7 +1,8 @@
 
 ---
-tags: proxy
+tags: [proxy]
 ---
+
 
 
 ## Make it work
