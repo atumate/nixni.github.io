@@ -1,4 +1,9 @@
 
+---
+tags: proxy
+---
+
+
 ## Make it work
 1. `wget https://bootstrap.pypa.io/get-pip.py && python get-pip.py`
 1. `pip install shadowsocks`
