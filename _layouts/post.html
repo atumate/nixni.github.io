@@ -14,7 +14,7 @@ layout: default
 					<span class="post-tags">
 						{% if page.tags.size > 0 %}
 						{% for cat in page.tags %}
-						<a class="post-cat" href="{{ site.url }}/tags/#{{ cat }}">{{ cat }}</a>
+						<a class="post-cat" href="/tags/#{{ cat }}">{{ cat }}</a>
 						{% unless forloop.last %}
 						<span>/</span>
 						{% endunless %}
@@ -36,6 +36,20 @@ layout: default
 				<div class="content markdown-body">
 					{{content}}
 				</div>
+
+				
+
+				<div class="PageNavigation">
+					{% if page.next.url %}
+					<a class="next post-new" href="{{page.next.url}}">&laquo; {{page.next.title}} </a>
+					{% endif %}
+
+					{% if page.previous.url %}
+					<a class="prev post-old float-right"  href="{{page.previous.url}}">{{page.previous.title}} &raquo; </a>
+					{% endif %}
+					
+				</div>
+
 				
 			</div><!-- /.blog-post -->
 
