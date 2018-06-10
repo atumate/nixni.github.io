@@ -27,7 +27,7 @@ tags: [proxy]
 
 ## Be elegant
 
-1. save below code to a file like `ssclient`
+1. save below code to a file like `ssclient`    
 ``` sh
 #!/bin/bash
 
