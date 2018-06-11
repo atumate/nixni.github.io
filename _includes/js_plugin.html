@@ -12,7 +12,6 @@
 	});
 
 	$('#toc').before('<div class="p-3"><h4 class="font-italic">Nav</h4></div>');
-	
 </script>
 {% endif %}
 
@@ -61,6 +60,18 @@
         $('#back-to-top').tooltip();
 
     });
+</script>
+
+
+<!-- anchor smooth -->
+<script type="text/javascript">
+	$(document).on('click', 'a[href^="#"]', function (event) {
+		event.preventDefault();
+
+		$('html, body').animate({
+			scrollTop: $($.attr(this, 'href')).offset().top
+		}, 300);
+	});
 </script>
 
 
