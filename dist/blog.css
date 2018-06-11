@@ -289,3 +289,7 @@ nav[data-toggle='toc'] {
  z-index: 9001;
 }
 
+.PageNavigation {
+    margin-top: 25px;
+}
+
