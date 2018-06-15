@@ -5,7 +5,7 @@ yum -y install net-tools zip unzip vim elinks tree wget git curl
 
 ## ssh key login
 ``` sh
-mkdir ~/.ssh && touch ~/.ssh/authorized_keys  && vim ~/.ssh/authorized_keys
+mkdir ~/.ssh ; vim ~/.ssh/authorized_keys
 ```
 
 ## date sync
