@@ -78,6 +78,6 @@ firewall-cmd --permanent --zone=public --add-service=http && firewall-cmd --relo
 ## Install All
 
 ``` sh
-yum -y install net-tools zip unzip vim elinks tree wget git curl httpd mysql mariadb-server php php-mysql samba epel ntp
+yum -y install net-tools zip unzip vim elinks tree wget git curl httpd mysql mariadb-server php php-mysql samba epel ntp nss libcurl
 ```
 
