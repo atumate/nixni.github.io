@@ -46,7 +46,7 @@ firewall-cmd --permanent --zone=public --add-service=http && firewall-cmd --relo
 ## Samba
 	yum install samba
 
-smb.conf
+/etc/samba/smb.conf
 
 	        security = user
 	        passdb backend = tdbsam
