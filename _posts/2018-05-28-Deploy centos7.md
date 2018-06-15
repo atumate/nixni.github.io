@@ -74,4 +74,10 @@ smb.conf
 
 ## Selinux Apache
 	chcon -R -t httpd_sys_content_t */
+	
+## Install All
+
+``` sh
+yum -y install net-tools zip unzip vim elinks tree wget git curl httpd mysql mariadb-server php php-mysql samba epel ntp
+```
 
