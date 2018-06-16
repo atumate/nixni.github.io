@@ -78,6 +78,7 @@ firewall-cmd --permanent --zone=public --add-service=http && firewall-cmd --relo
 ## sqlalchemy
 ``` sh
 yum -y install phpmyadmin python36 python36-devel mysql-devel gcc
+pip3 install mysqlclient
 ```
 	
 ## Install All
