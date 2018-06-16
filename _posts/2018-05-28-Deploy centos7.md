@@ -75,6 +75,11 @@ firewall-cmd --permanent --zone=public --add-service=http && firewall-cmd --relo
 ## Selinux Apache
 	chcon -R -t httpd_sys_content_t */
 	
+## sqlalchemy
+``` sh
+yum -y install phpmyadmin python36 python36-devel mysql-devel gcc
+```
+	
 ## Install All
 
 ``` sh
@@ -82,6 +87,6 @@ yum -y install net-tools zip unzip vim elinks tree wget git curl /
 httpd mysql mariadb-server php php-mysql samba /
 epel ntp nss libcurl 
 yum -y install phpmyadmin python36 /
-gcc
+
 ```
 
