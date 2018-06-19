@@ -5,7 +5,7 @@
 ## Step
 1. `htpasswd -c /etc/httpd/.htpasswd user1` 
 1. `vim /etc/httpd/conf/httpd.conf `, add below lines
-    ``` httpd.conf
+    ``` apache
     <Directory "/var/www/html/dir-to-be-protected">
         Options +FollowSymLinks +Multiviews +Indexes
         AllowOverride None
