@@ -6,6 +6,11 @@
 		var navSelector = '#toc';
 		var $myNav = $(navSelector);
 		Toc.init($myNav);
+		Toc.init({
+			$nav: $myNav,
+			$scope: $('.content'),
+		});
+		
 		$('body').scrollspy({
 			target: navSelector
 		});
