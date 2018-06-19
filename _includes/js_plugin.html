@@ -3,14 +3,16 @@
 {% if page.path contains '_posts' or (page.url == "/") %}
 <script type="text/javascript">
 	$(function() {
-		var navSelector = '#toc';
+		var tocNav = '#toc';
+		var tocScope = '.toc-scope';
+		
 		Toc.init({
-			$nav: $(navSelector),
-			$scope: $('.content'),
+			$nav: $(tocNav),
+			$scope: $(tocScope),
 		});
 		
 		$('body').scrollspy({
-			target: navSelector
+			target: tocNav
 		});
 	});
 
