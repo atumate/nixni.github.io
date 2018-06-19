@@ -4,10 +4,8 @@
 <script type="text/javascript">
 	$(function() {
 		var navSelector = '#toc';
-		var $myNav = $(navSelector);
-		Toc.init($myNav);
 		Toc.init({
-			$nav: $myNav,
+			$nav: $(navSelector),
 			$scope: $('.content'),
 		});
 		
