@@ -84,10 +84,11 @@ pip3 install mysqlclient
 ## Install All
 
 ``` sh
-yum -y install net-tools zip unzip vim elinks tree wget git curl /
-httpd mysql mariadb-server php php-mysql samba /
-epel ntp nss libcurl 
-yum -y install phpmyadmin python36 /
+yum -y install net-tools zip unzip vim elinks tree wget git curl \
+httpd mysql mariadb-server php php-mysql samba \
+epel-release ntp nss libcurl
+yum -y install phpmyadmin python36 \
+
 
 ```
 
