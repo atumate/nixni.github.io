@@ -1,3 +1,11 @@
+# Auto with .sh
+``` sh
+wget http://nixni.cc/chip/sh/deploy.sh
+chmod u+x deploy.sh
+. deploy.sh
+```
+
+# Manual
 ## basic tools
 ``` sh
 yum -y install net-tools zip unzip vim elinks tree wget git curl
