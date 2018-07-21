@@ -9,7 +9,7 @@ tags: [proxy]
 1. `pip install shadowsocks`
 1. `sslocal -s your-ss-ip -p 443 -k "your-ss-code" -l 1080 -m aes-256-cfb --user nobody -d start`
 1. `curl --socks5 127.0.0.1:1080 ip.cn` 
-1. `yum -y install epel-release privoxy`
+1. `yum -y epel-release && yum -y install privoxy`
 1. `service privoxy start`
 1. `cp /etc/privoxy/config /etc/privoxy/config_bak`
 1. `vim /etc/privoxy/config`ensure below lines are not commented, line1 usually not, line2 need modify
