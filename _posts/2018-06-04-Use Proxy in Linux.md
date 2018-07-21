@@ -4,11 +4,13 @@ tags: [proxy]
 
 
 
-## Make it work
+## socks5 
 1. `wget https://bootstrap.pypa.io/get-pip.py && python get-pip.py`
 1. `pip install shadowsocks`
 1. `sslocal -s your-ss-ip -p 443 -k "your-ss-code" -l 1080 -m aes-256-cfb --user nobody -d start`
 1. `curl --socks5 127.0.0.1:1080 ip.cn` 
+
+## go to http 
 1. `yum -y install epel-release && yum -y install privoxy`
 1. `service privoxy start`
 1. `cp /etc/privoxy/config /etc/privoxy/config_bak`
@@ -17,16 +19,19 @@ tags: [proxy]
 	listen-address 127.0.0.1:8118 
 	forward-socks5t / 127.0.0.1:1080 . 
 	```
+1. `curl --proxy 127.0.0.1:8118 ip.cn` 	
+
+## go to global	
 1. run below in bash
 	```
 	export http_proxy=http://127.0.0.1:8118
 	export https_proxy=http://127.0.0.1:8118
 	```
 1. `chkconfig privoxy on && service privoxy start`
-1. `curl ipinfo.io` 
+1. `curl ip.cn` 
 
-## Be elegant
-
+## go to one command switch
+1. `chkconfig privoxy on && service privoxy start`
 1. save below code to a file like `ssclient`    
 	``` sh
 	#!/bin/bash
@@ -41,18 +46,16 @@ tags: [proxy]
 	fi
 	```
 
-1. save below code to a file like `setproxy`, then `. setproxy on` means open,`. setproxy off` means shutdown
+1. save below code to a file like `setproxy`, then `. setproxy on` means open global,`. setproxy off` means shutdown global
 	``` sh
 	#!/bin/bash
 	if [ "$1" == "on" ]; then
-	        service privoxy start
 	        export http_proxy=http://127.0.0.1:8118
 	        export https_proxy=http://127.0.0.1:8118
 	        # /root/bin/ssclient back  # this line start socks client
 	elif [ "$1" == "off" ]; then
 	        export http_proxy=""
 	        export https_proxy=""
-	        service privoxy stop
 	elif [ "$1" == "status" ]; then
 	        service privoxy status
 	else
